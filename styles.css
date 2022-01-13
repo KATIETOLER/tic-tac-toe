@@ -1,0 +1,79 @@
+* {
+  font-family: "Raleway";
+  background-color: #5D4954;
+  color: #E6DBD0;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.player, .computer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #7D6167;
+  height: 75vw;
+  width: 25vw;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: center;
+}
+
+.game {
+  background-color: #F9E0D9;
+  height: 75vw;
+  width: 50vw;
+}
+
+img {
+  background-color: #7D6167;
+  height: 10vw;
+  width: 10vw;
+  padding: 1vw;
+}
+
+.win-counter {
+  background-color: #7D6167;
+}
+
+.square {
+  display: flex;
+  color: black;
+  height: 10vw;
+  width: 10vw;
+  background-color: #F9E0D9;
+  border: .5vw solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-board {
+  background-color: #F9E0D9;
+  display: grid;
+  grid-template: 0fr 0fr 0fr / 0fr 0fr 0fr;
+  cursor: pointer;
+  justify-content: center;
+  padding: 2vw;
+}
+
+.top {
+  border-top: #F9E0D9;
+}
+
+.bottom {
+  border-bottom: #F9E0D9;
+}
+
+.left {
+  border-left: #F9E0D9;
+}
+
+.right {
+  border-right: #F9E0D9;
+}
