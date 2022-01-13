@@ -2,6 +2,7 @@
   font-family: "Raleway";
   background-color: #5D4954;
   color: #E6DBD0;
+  overflow: hidden;
 }
 
 main {
