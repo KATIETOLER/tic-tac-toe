@@ -49,7 +49,7 @@ img {
   height: 10vw;
   width: 10vw;
   background-color: #F9E0D9;
-  border: .5vw solid black;
+  border: .4vw solid #42363c;
   align-items: center;
   justify-content: center;
 }
