@@ -15,6 +15,13 @@ header {
   justify-content: center;
 }
 
+img {
+  background-color: #7D6167;
+  height: 10vw;
+  width: 10vw;
+  padding: 1vw;
+}
+
 .player, .computer {
   display: flex;
   justify-content: flex-start;
@@ -32,13 +39,6 @@ header {
   width: 50vw;
 }
 
-img {
-  background-color: #7D6167;
-  height: 10vw;
-  width: 10vw;
-  padding: 1vw;
-}
-
 .win-counter {
   background-color: #7D6167;
 }
@@ -49,7 +49,7 @@ img {
   height: 10vw;
   width: 10vw;
   background-color: #F9E0D9;
-  border: .4vw solid #42363c;
+  border: .3vw solid #B29E9C;
   align-items: center;
   justify-content: center;
 }
@@ -78,3 +78,42 @@ img {
 .right {
   border-right: #F9E0D9;
 }
+
+.game-pieces, .icon{
+  height: 5vw;
+  width: 5vw;
+  background-color:inherit;
+}
+
+.icon{
+  padding: 0.1vw;
+}
+
+
+.turn{
+  display: flex;
+  animation: fadeIn ease 10s;
+  justify-content: center;
+  align-items: flex-end;
+}
+@keyframes fadeIn {
+ 0% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+
+.computer-piece{
+    animation: fadeIn ease 2s;
+  }
+  @keyframes fadeIn {
+   0% {
+     opacity:0;
+   }
+   100% {
+     opacity:1;
+   }
+  }

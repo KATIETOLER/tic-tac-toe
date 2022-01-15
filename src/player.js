@@ -1,6 +1,7 @@
 class Player {
-  constructor(){
+  constructor() {
     this.id = Date.now()
-    this.wins = wins;
+    this.wins = 0;
+    this.turn = false;
   }
 }
