@@ -39,7 +39,7 @@ button:hover{
   color:#5D4954;
 }
 
-.player, .computer {
+.player-one, .player-two {
   display: flex;
   justify-content: flex-start;
   background-color: #7D6167;
