@@ -1,7 +1,8 @@
 class Player {
-  constructor() {
+  constructor(turn) {
+    this.name = name;
     this.id = Date.now()
     this.wins = 0;
-    this.turn = false;
+    this.turn = turn;
   }
 }

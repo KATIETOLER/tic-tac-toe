@@ -86,13 +86,13 @@ img {
 }
 
 .icon{
-  padding: 0.1vw;
+  padding: 0.2vw;
 }
 
 
 .turn{
   display: flex;
-  animation: fadeIn ease 10s;
+  animation: fadeIn ease 6s;
   justify-content: center;
   align-items: flex-end;
 }
