@@ -4,9 +4,9 @@ var gameBoard = document.querySelector('.game-board')
 var playerWins = document.querySelector('.player-wins')
 var computerWins = document.querySelector('.computer-wins')
 var turnIcon = document.querySelector('.turn')
-
+var newGameButton = document.querySelector('button')
 /// Event Listeners ///
-
+newGameButton.addEventListener('click', startOver)
 gameBoard.addEventListener('click', function(event) {
   var id = event.target
   var ids = event.target.id
@@ -33,7 +33,7 @@ var playerPlays = []
 var computerPlays = []
 var playerOne = new Player(true)
 var playerTwo = new Player(false)
-
+var game = new Game
 /// Functions ///
 
 
@@ -70,14 +70,14 @@ function addPlays(ids){
   checkForWin(playerPlays)
 }
 
-
 function checkForWin(plays) {
-  for(var i = 0; i < plays.length; i ++){
-    if(plays[i] ){
+  for(var i = 0; i < plays.length; i ++) {
+    if(plays[i].includes('1')){
 
     }
-      }
-    }
+  }
+}
+
 
 ///  1. 123
   // 2. 456
@@ -88,7 +88,18 @@ function checkForWin(plays) {
   // 7. 159
   // 8. 753
 
-
+function startOver() {
+  gameBoard.innerHTML= `<div class="square top left" id="1"></div>
+  <div class="square top" id="2"></div>
+  <div class="square top right" id="3"></div>
+  <div class="square left" id="4"></div>
+  <div class="square" id="5"></div>
+  <div class="square right" id="6"></div>
+  <div class="square bottom left" id="7"></div>
+  <div class="square bottom" id="8"></div>
+  <div class="square bottom right" id="9"></div>`
+  game.resetGame()
+}
 
 function hide(element) {
   element.classList.add('hidden')
