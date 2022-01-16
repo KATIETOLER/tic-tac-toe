@@ -11,8 +11,9 @@ gameBoard.addEventListener('click', function(event) {
   var id = event.target
   var ids = event.target.id
   showIcon(id)
-  showTurn()
   addPlays(ids)
+  showTurn()
+  checkForWin()
 })
 
 
@@ -34,12 +35,13 @@ var playerTwoPlays = []
 var playerOne = new Player(true)
 var playerTwo = new Player(false)
 var game = new Game
-var winningPlays = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[7,5,3]]
+var winningPlays = ["1,2,3","4,5,6","7,8,9","1,4,7","2,5,8","3,6,9","1,5,9","7,5,3"]
 
 /// Functions ///
 
 
 function showIcon(id) {
+
   if(playerOne.turn === true) {
     id.innerHTML = `<img src="./assets/spider-plant.png" alt="plant" class="game-pieces"/>`
     playerOne = new Player(false)
@@ -51,11 +53,13 @@ function showIcon(id) {
   }
 }
 
-function checkSpace(event) {
-  if(!playerOnePlays.includes(event.target.id)){
-console.log('bitchin')
-  }
-}
+// function checkSpace() {
+//   console.log(event.target)
+//   if(!event.target.innerHTML === ''){
+//     showIcon(id)
+//     addPlays(ids)
+//   }
+// }
 
 function showTurn() {
   if(playerOne.turn === true){
@@ -68,20 +72,28 @@ function showTurn() {
 function addPlays(ids){
   if(playerOne.turn === true) {
     playerOnePlays.push(ids)
-    console.log("player one:", playerOnePlays)
+    availablePlays.pop(ids)
+    console.log("player one:", availablePlays)
   } else if (playerTwo.turn === true) {
     playerTwoPlays.push(ids)
-    console.log("player two:", playerTwoPlays)
+    // console.log("player two:", playerTwoPlays)
   }
-  // checkForWin(playerTwoPlays, game.winningPlays)
-  // checkForWin(playerOnePlays, game.winningPlays)
 }
 
-// function checkForWin(plays, winSet) {
-//   return winSet.every(function(element) {
-//     return plays.includes(element);
-//   });
-// };
+function checkForWin() {
+  console.log("test", playerOnePlays.toString())
+  if(winningPlays.includes(playerOnePlays.toString())){
+    playerTwo.wins+=1
+    playerTwoWins.innerHTML = `Wins: ${playerOne.wins}`
+    console.log(playerTwo.wins)
+  } else if (winningPlays.includes(playerTwoPlays.toString())){
+    console.log('byeee')
+    playerOne.wins++
+    playerOneWins.innerHTML = `Wins: ${playerOne.wins}`
+  } else if (availablePlays === []){
+    turnIcon.innerHTML = ` It's a Tie!`
+  }
+};
 
 
 function startOver() {
