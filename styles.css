@@ -22,6 +22,23 @@ img {
   padding: 1vw;
 }
 
+button{
+  font-size: 1em;
+  font-weight: 600;
+  padding: 1vw;
+  border: solid .5vw #5D4954;
+  border-radius: 6vw;
+  width: 13vw;
+  padding: 1vw;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #6A8E7F;
+  border-color: #6A8E7F;
+  color:#5D4954;
+}
+
 .player, .computer {
   display: flex;
   justify-content: flex-start;
@@ -34,6 +51,9 @@ img {
 }
 
 .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #F9E0D9;
   height: 75vw;
   width: 50vw;
@@ -61,6 +81,7 @@ img {
   cursor: pointer;
   justify-content: center;
   padding: 2vw;
+  /* padding-bottom: 9vw; */
 }
 
 .top {
