@@ -9,32 +9,36 @@
 </head>
 <body>
 <header>
-  <h1>Tic-Tac-Toe</h1>
+  <p>
+    <h1>Tic-Tac-Toe</h1>
+  </p>
 </header>
+  <h2 class="turn">It's <img src="./assets/spider-plant.png" alt="plant" class="icon"/>'s Turn!</h2>
   <main>
     <div class="player">
       <img src="./assets/spider-plant.png" alt="plant" />
-      <h3 class="win-counter">Wins </h3>
+      <h3 class="win-counter player-wins">Wins </h3>
     </div>
     <section class="game">
       <section class="game-board">
-          <div class="square top left" id="one"></div>
-          <div class="square top" id="two"></div>
-          <div class="square top right" id="three"></div>
-          <div class="square left" id="four"></div>
-          <div class="square" id="five"></div>
-          <div class="square right" id="six"></div>
-          <div class="square bottom left" id="seven"></div>
-          <div class="square bottom" id="eight"></div>
-          <div class="square bottom right" id="nine"></div>
+          <div class="square top left" id="1"></div>
+          <div class="square top" id="2"></div>
+          <div class="square top right" id="3"></div>
+          <div class="square left" id="4"></div>
+          <div class="square" id="5"></div>
+          <div class="square right" id="6"></div>
+          <div class="square bottom left" id="7"></div>
+          <div class="square bottom" id="8"></div>
+          <div class="square bottom right" id="9"></div>
       </section>
     </section>
     <div class="computer">
       <img src="./assets/moth.png" alt="moth" />
-      <h3 class="win-counter">Wins </h3>
+      <h3 class="win-counter computer-wins">Wins </h3>
     </div>
   </main>
-  <script src="./src/data.js"></script>
+  <script src="./src/game.js"></script>
+    <script src="./src/player.js"></script>
   <script src="./src/main.js"></script>
 </body>
 </html>
