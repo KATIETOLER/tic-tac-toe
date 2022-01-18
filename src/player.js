@@ -3,6 +3,5 @@ class Player {
     this.id = Date.now()
     this.wins = 0;
     this.turn = turn;
-    this.token = token;
   }
 }
