@@ -70,14 +70,14 @@ function checkForWin() {
         playerOne.wins+=1
         p1PlantWins.innerHTML = `Wins: ${playerOne.wins}`
         plantWinMsg.classList.remove('hidden')
-        setTimeout(startOver, 500)
+        setTimeout(startOver, 1000)
         return;
       }
       if (winningPlays[i].every(play => (playerTwoPlays.includes(play)))) {
         playerTwo.wins+=1
         p2MothWins.innerHTML = `Wins: ${playerTwo.wins}`
         mothWinMsg.classList.remove('hidden')
-        setTimeout(startOver, 500)
+        setTimeout(startOver, 1000)
         return;
       } else if (game.turnCount === 9 && !winningPlays[i].every(play => (playerTwoPlays.includes(play))) && !winningPlays[i].every(play => (playerOnePlays.includes(play)))) {
         setTimeout(tie, 500)
@@ -105,5 +105,7 @@ function startOver() {
   <div class="square bottom right" id="9"></div>
   `
   gameBoard.classList.add('fade-in')
+  mothWinMsg.classList.add('hidden')
+  plantWinMsg.classList.add('hidden')
   game.resetGame()
 }
