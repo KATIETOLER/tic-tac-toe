@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Element Styles */
 
 * {
   font-family: "Raleway";
@@ -18,13 +18,12 @@ header {
 }
 
 img {
-  background-color: #7D6167;
   height: 10vw;
   width: 10vw;
   padding: 1vw;
 }
 
-button{
+button {
   font-size: 1em;
   font-weight: 600;
   padding: 1vw;
@@ -34,6 +33,7 @@ button{
   padding: 1vw;
   cursor: pointer;
 }
+
 article {
   display: flex;
   padding: 2vw;
@@ -46,7 +46,7 @@ article {
   animation-fill-mode: forwards;
 }
 
-button:hover{
+button:hover {
   background-color: #6A8E7F;
   border-color: #6A8E7F;
   color:#5D4954;
@@ -57,7 +57,6 @@ button:hover{
 .player-one, .player-two {
   display: flex;
   justify-content: flex-start;
-  background-color: #7D6167;
   height: 75vw;
   width: 25vw;
   flex-direction: column;
@@ -65,17 +64,20 @@ button:hover{
   align-items: center;
 }
 
+img, .win-counter, .player-one, .player-two {
+  background-color: #7D6167;
+}
+
 .game {
   display: flex;
   flex-direction: column;
+}
+
+.game {
   align-items: center;
   background-color: #F9E0D9;
   height: 75vw;
   width: 50vw;
-}
-
-.win-counter {
-  background-color: #7D6167;
 }
 
 .square {
@@ -88,6 +90,29 @@ button:hover{
   align-items: center;
   justify-content: center;
 }
+
+.game-pieces, .icon {
+  height: 5vw;
+  width: 5vw;
+  background-color:inherit;
+}
+
+.icon {
+  padding: 0.2vw;
+}
+
+.turn {
+  display: flex;
+  animation: fadeIn ease 6s;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.computer-piece {
+  animation: fadeIn ease 2s;
+}
+
+ /* Game Board Style */
 
 .game-board {
   background-color: #F9E0D9;
@@ -114,26 +139,7 @@ button:hover{
   border-right: #F9E0D9;
 }
 
-.game-pieces, .icon{
-  height: 5vw;
-  width: 5vw;
-  background-color:inherit;
-}
-
-.icon{
-  padding: 0.2vw;
-}
-
-.turn {
-  display: flex;
-  animation: fadeIn ease 6s;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.computer-piece, {
-    animation: fadeIn ease 2s;
-  }
+/* Reusable Rules */
 
 .fade-in {
   animation: fadeIn ease 5s;
@@ -145,58 +151,6 @@ button:hover{
 
 /* --------- ANIMATIONS --------  */
 
-  @-webkit-keyframes bounce-in-right {
-    0% {
-      -webkit-transform: translateX(600px);
-              transform: translateX(600px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    38% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55% {
-      -webkit-transform: translateX(68px);
-              transform: translateX(68px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    72% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    81% {
-      -webkit-transform: translateX(32px);
-              transform: translateX(32px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    90% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    95% {
-      -webkit-transform: translateX(8px);
-              transform: translateX(8px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
   @keyframes bounce-in-right {
     0% {
       -webkit-transform: translateX(600px);
@@ -261,19 +215,6 @@ button:hover{
       opacity: 0;
     }
   }
-  @keyframes fade-out-right {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: translateX(50px);
-              transform: translateX(50px);
-      opacity: 0;
-    }
-  }
-
   @keyframes fadeIn {
    0% {
      opacity:0;
@@ -282,4 +223,5 @@ button:hover{
      opacity:1;
    }
   }
+
 /* ------------------- */
