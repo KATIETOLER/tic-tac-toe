@@ -72,24 +72,25 @@ for(var i = 0; i < winningPlays.length; i++)
         p1PlantWins.innerHTML = `Wins: ${playerOne.wins}`
         plantWinMsg.classList.remove('hidden')
         startOver()
+        return;
       }
       if (winningPlays[i].every(play => (playerTwoPlays.includes(play)))) {
         playerTwo.wins+=1
         p2MothWins.innerHTML = `Wins: ${playerTwo.wins}`
         mothWinMsg.classList.remove('hidden')
         startOver()
-      } else {
+        return;
+      } else if (game.turnCount === 9){
         setTimeout(tie, 500)
       }
   }
+
 };
 
 function tie() {
   if(game.turnCount === 9){
-    turnIcon.innerHTML = `It's a Tie!`
+    turnIcon.innerHTML = `It's a Tie!!!`
     startOver()
-} else {
-  return;
   }
 }
 
