@@ -9,7 +9,8 @@
 * Plant icon by [Surang](https://www.flaticon.com/authors/surang)
 * Moth icon by [Freepik](https://www.freepik.com)
 
-
+*Start Over*
+![start over button](https://media2.giphy.com/media/r83Kk1ScuaNwEY4kYt/giphy.gif)
 ---
 ##### _Color Palette_
   * Misty Rose #F9E0D9
