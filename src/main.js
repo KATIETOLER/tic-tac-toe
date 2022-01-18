@@ -29,7 +29,6 @@ playerOne.turn = true;
 var playerTwo = new Player("moth")
 var winningPlays = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[7,5,3]]
 
-
 /// Functions ///
 
 function showIcon(id) {
@@ -65,35 +64,33 @@ function addPlays(ids){
 }
 
 function checkForWin() {
-for(var i = 0; i < winningPlays.length; i++)
-{
+  for(var i = 0; i < winningPlays.length; i++)
+    {
       if (winningPlays[i].every(play => (playerOnePlays.includes(play)))) {
         playerOne.wins+=1
         p1PlantWins.innerHTML = `Wins: ${playerOne.wins}`
         plantWinMsg.classList.remove('hidden')
-        startOver()
+        setTimeout(startOver, 500)
         return;
       }
       if (winningPlays[i].every(play => (playerTwoPlays.includes(play)))) {
         playerTwo.wins+=1
         p2MothWins.innerHTML = `Wins: ${playerTwo.wins}`
         mothWinMsg.classList.remove('hidden')
-        startOver()
+        setTimeout(startOver, 500)
         return;
-      } else if (game.turnCount === 9){
+      } else if (game.turnCount === 9 && !winningPlays[i].every(play => (playerTwoPlays.includes(play))) && !winningPlays[i].every(play => (playerOnePlays.includes(play)))) {
         setTimeout(tie, 500)
       }
-  }
-
+    }
 };
 
 function tie() {
   if(game.turnCount === 9){
-    turnIcon.innerHTML = `It's a Tie!!!`
+    turnIcon.innerHTML = `It's a Tie!`
     startOver()
   }
 }
-
 
 function startOver() {
   gameBoard.innerHTML= `

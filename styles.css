@@ -86,7 +86,7 @@ img, .win-counter, .player-one, .player-two {
   height: 10vw;
   width: 10vw;
   background-color: #F9E0D9;
-  border: .3vw solid #B29E9C;
+  border: .2vw solid #B29E9C;
   align-items: center;
   justify-content: center;
 }
