@@ -5,6 +5,8 @@ var p2MothWins = document.querySelector('.player-two-wins')
 var p1PlantWins = document.querySelector('.player-one-wins')
 var turnIcon = document.querySelector('.turn')
 var newGameButton = document.querySelector('button')
+var mothWinMsg = document.querySelector('.moth-win-msg')
+var plantWinMsg = document.querySelector('.plant-win-msg')
 
 /// Event Listeners ///
 
@@ -13,10 +15,8 @@ gameBoard.addEventListener('click', function(event) {
   var id = event.target
   var ids = event.target.id
   showIcon(id)
-  // addPlays(ids)
   checkForWin()
   showTurn()
-  // checkSpace()
 })
 
 /// Global Variables ///
@@ -29,7 +29,6 @@ var playerOne = new Player("plant")
 playerOne.turn = true;
 var playerTwo = new Player("moth")
 var winningPlays = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[7,5,3]]
-// var winningPlays = [["1","2","3"],"4,5,6","7,8,9","1,4,7","2,5,8","3,6,9","1,5,9","7,5,3"]
 
 /// Functions ///
 
@@ -61,11 +60,7 @@ function addPlays(ids){
     } else if (playerTwo.turn === true) {
       playerTwoPlays.push(parseInt(ids))
     }
-    console.log(playerOnePlays)
-    console.log(playerTwoPlays)
 }
-
-// (plant => (plantStore.currentStock.includes(plant)));
 
 function checkForWin() {
 for(var i = 0; i < winningPlays.length; i++)
@@ -84,7 +79,8 @@ for(var i = 0; i < winningPlays.length; i++)
 };
 
 function startOver() {
-  gameBoard.innerHTML= `<div class="square top left" id="1"></div>
+  gameBoard.innerHTML= `
+  <div class="square top left" id="1"></div>
   <div class="square top" id="2"></div>
   <div class="square top right" id="3"></div>
   <div class="square left" id="4"></div>
@@ -92,13 +88,13 @@ function startOver() {
   <div class="square right" id="6"></div>
   <div class="square bottom left" id="7"></div>
   <div class="square bottom" id="8"></div>
-  <div class="square bottom right" id="9"></div>`
+  <div class="square bottom right" id="9"></div>
+  `
+  gameBoard.classList.add('fade-in')
   game.resetGame()
 }
 
-function showWinMsg() {
 
-}
 
 function hide(element) {
   element.classList.add('hidden')
