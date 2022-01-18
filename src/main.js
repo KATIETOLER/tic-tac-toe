@@ -29,6 +29,7 @@ playerOne.turn = true;
 var playerTwo = new Player("moth")
 var winningPlays = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[7,5,3]]
 
+
 /// Functions ///
 
 function showIcon(id) {
@@ -55,8 +56,10 @@ function showTurn() {
 
 function addPlays(ids){
     if(playerOne.turn === true) {
+      game.turnCount++
       playerOnePlays.push(parseInt(ids))
     } else if (playerTwo.turn === true) {
+      game.turnCount++
       playerTwoPlays.push(parseInt(ids))
     }
 }
@@ -75,9 +78,21 @@ for(var i = 0; i < winningPlays.length; i++)
         p2MothWins.innerHTML = `Wins: ${playerTwo.wins}`
         mothWinMsg.classList.remove('hidden')
         startOver()
-    }
+      } else {
+        setTimeout(tie, 500)
+      }
   }
 };
+
+function tie() {
+  if(game.turnCount === 9){
+    turnIcon.innerHTML = `It's a Tie!`
+    startOver()
+} else {
+  return;
+  }
+}
+
 
 function startOver() {
   gameBoard.innerHTML= `
@@ -94,17 +109,3 @@ function startOver() {
   gameBoard.classList.add('fade-in')
   game.resetGame()
 }
-
-
-
-function hide(element) {
-  element.classList.add('hidden')
-}
-
-function show(element) {
-  element.classList.remove('hidden')
-};
-
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length + 1);
-};
