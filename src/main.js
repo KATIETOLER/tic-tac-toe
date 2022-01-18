@@ -81,8 +81,7 @@ for(var i = 0; i < winningPlays.length; i++)
         startOver()
         return;
       } else if (game.turnCount === 9){
-        console.log("its aa tie!")
-        setTimeout(tie, 1000)
+        setTimeout(tie, 500)
       }
   }
 
