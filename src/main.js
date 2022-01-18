@@ -22,7 +22,6 @@ gameBoard.addEventListener('click', function(event) {
 /// Global Variables ///
 
 var game = new Game()
-var availablePlays = [1,2,3,4,5,6,7,8,9]
 var playerOnePlays = []
 var playerTwoPlays = []
 var playerOne = new Player("plant")
@@ -68,11 +67,13 @@ for(var i = 0; i < winningPlays.length; i++)
       if (winningPlays[i].every(play => (playerOnePlays.includes(play)))) {
         playerOne.wins+=1
         p1PlantWins.innerHTML = `Wins: ${playerOne.wins}`
+        plantWinMsg.classList.remove('hidden')
         startOver()
       }
-      if (winningPlays[i].every(play => (playerTwoPlays.includes(play)))){
+      if (winningPlays[i].every(play => (playerTwoPlays.includes(play)))) {
         playerTwo.wins+=1
         p2MothWins.innerHTML = `Wins: ${playerTwo.wins}`
+        mothWinMsg.classList.remove('hidden')
         startOver()
     }
   }
