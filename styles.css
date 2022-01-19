@@ -1,4 +1,4 @@
-/* Element Styles */
+/* --------- Element Styles --------- */
 
 * {
   font-family: "Raleway";
@@ -40,26 +40,24 @@ article {
   height: 10vw;
   background-color: inherit;
   align-items: center;
-  -webkit-animation: bounce-in-right 1.1s both;
-  animation: bounce-in-right 1.1s both;
+  -webkit-animation: bounce-in-right 2.1s both;
+  animation: bounce-in-right 2.1s both;
   animation: fade-out-right 1s;
   animation-fill-mode: forwards;
 }
 
 button:hover {
   background-color: #6A8E7F;
-  border-color: #6A8E7F;
+  border: solid #6A8E7F;
   color:#5D4954;
 }
 
-/* Class Styles */
+/* --------- Class Styles --------- */
 
 .player-one, .player-two {
-  display: flex;
   justify-content: flex-start;
   height: 75vw;
   width: 25vw;
-  flex-direction: column;
   align-content: stretch;
   align-items: center;
 }
@@ -68,7 +66,7 @@ img, .win-counter, .player-one, .player-two {
   background-color: #7D6167;
 }
 
-.game {
+.game, .player-one, .player-two {
   display: flex;
   flex-direction: column;
 }
@@ -82,13 +80,13 @@ img, .win-counter, .player-one, .player-two {
 
 .square {
   display: flex;
-  color: black;
-  height: 10vw;
-  width: 10vw;
-  background-color: #F9E0D9;
-  border: .2vw solid #B29E9C;
   align-items: center;
   justify-content: center;
+  height: 10vw;
+  width: 10vw;
+  color: black;
+  background-color: #F9E0D9;
+  border: .2vw solid #B29E9C;
 }
 
 .game-pieces, .icon {
@@ -112,7 +110,7 @@ img, .win-counter, .player-one, .player-two {
   animation: fadeIn ease 2s;
 }
 
- /* Game Board Style */
+ /* --------- Game Board Style --------- */
 
 .game-board {
   background-color: #F9E0D9;
@@ -139,7 +137,7 @@ img, .win-counter, .player-one, .player-two {
   border-right: #F9E0D9;
 }
 
-/* Reusable Rules */
+/* --------- Reusable Rules --------- */
 
 .fade-in {
   animation: fadeIn ease 5s;
