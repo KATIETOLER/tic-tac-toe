@@ -52,6 +52,7 @@ Site Examples
 ![Plant can Win](https://media4.giphy.com/media/40JD6M9p3rWc3SUUW2/giphy.gif)
 
 **Local Storage**
+
 ![Wins Persist After Page Reload](https://media4.giphy.com/media/djO2rZ1UUVFWAI95th/giphy.gif)
 
 ---
