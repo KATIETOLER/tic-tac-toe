@@ -61,6 +61,7 @@ Site Examples
   * `Misty Rose #F9E0D9`
   * `Almond #E6DBD0`
   * `Deep Taupe #7D6167`
+  * `Wintergreen Dream #6A8E7F`
   * `Silver Pink #B29E9C`
   * `Eggplant Dark #5D4954`
 
