@@ -9,7 +9,7 @@ var mothWinMsg = document.querySelector('.moth-win-msg')
 var plantWinMsg = document.querySelector('.plant-win-msg')
 
 /// Event Listeners ///
-
+window.addEventListener('load', updatePlayerWins)
 newGameButton.addEventListener('click', startOver)
 gameBoard.addEventListener('click', function(event) {
   var id = event.target
@@ -26,7 +26,9 @@ var playerOnePlays = []
 var playerTwoPlays = []
 var playerOne = new Player("plant")
 playerOne.turn = true;
+playerOne.retrieveWinsFromStorage()
 var playerTwo = new Player("moth")
+playerTwo.retrieveWinsFromStorage()
 var winningPlays = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[7,5,3]]
 
 /// Functions ///
@@ -68,14 +70,16 @@ function checkForWin() {
     {
       if (winningPlays[i].every(play => (playerOnePlays.includes(play)))) {
         playerOne.wins+=1
-        p1PlantWins.innerHTML = `Wins: ${playerOne.wins}`
+        playerOne.saveWinsToStorage()
+        updatePlayerWins()
         plantWinMsg.classList.remove('hidden')
         setTimeout(startOver, 1000)
         return;
       }
       if (winningPlays[i].every(play => (playerTwoPlays.includes(play)))) {
         playerTwo.wins+=1
-        p2MothWins.innerHTML = `Wins: ${playerTwo.wins}`
+        playerTwo.saveWinsToStorage()
+        updatePlayerWins()
         mothWinMsg.classList.remove('hidden')
         setTimeout(startOver, 1000)
         return;
@@ -84,6 +88,11 @@ function checkForWin() {
       }
     }
 };
+
+function updatePlayerWins() {
+  p1PlantWins.innerHTML = `Wins: ${game.playerOne.retrieveWinsFromStorage()}`
+  p2MothWins.innerHTML = `Wins: ${game.playerTwo.retrieveWinsFromStorage()}`
+}
 
 function tie() {
   if(game.turnCount === 9){
