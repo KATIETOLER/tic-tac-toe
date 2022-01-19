@@ -53,13 +53,13 @@ function showTurn() {
 }
 
 function addPlays(ids){
-    if(playerOne.turn === true) {
-      game.turnCount++
-      playerOnePlays.push(parseInt(ids))
-    } else if (playerTwo.turn === true) {
-      game.turnCount++
-      playerTwoPlays.push(parseInt(ids))
-    }
+  if(playerOne.turn === true) {
+    game.turnCount++
+    playerOnePlays.push(parseInt(ids))
+  } else if (playerTwo.turn === true) {
+    game.turnCount++
+    playerTwoPlays.push(parseInt(ids))
+  }
 }
 
 function checkForWin() {
@@ -87,12 +87,14 @@ function checkForWin() {
 };
 
 function updatePlayerWins() {
+  gameBoard.classList.remove('fade-in')
   p1PlantWins.innerHTML = `Wins: ${game.playerOne.retrieveWinsFromStorage()}`
   p2MothWins.innerHTML = `Wins: ${game.playerTwo.retrieveWinsFromStorage()}`
 }
 
 function tie() {
   if(game.turnCount === 9){
+    gameBoard.classList.remove('fade-in')
     turnIcon.innerHTML = `It's a Tie!`
     startOver()
   }
@@ -112,7 +114,7 @@ function startOver() {
   `
   gameBoard.classList.add('fade-in')
   hide(mothWinMsg)
-  hide(plantWinMsg) 
+  hide(plantWinMsg)
   game.resetGame()
 }
 

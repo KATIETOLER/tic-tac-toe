@@ -8,7 +8,7 @@ Tic-Tac-Toe
 #### Links
 *  [Repository Link](https://github.com/KATIETOLER/tic-tac-toe)
 
-#### Technologies Used
+#### Tech Stack
 * HTML
 * CSS
 * Javascript
