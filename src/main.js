@@ -34,12 +34,12 @@ var winningPlays = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[7,5
 /// Functions ///
 
 function showIcon(id) {
-  if(playerOne.turn === true && !id.alt) {
+  if(playerOne.turn === true && !id.alt && id.innerHTML === '') {
     id.innerHTML = `<img src="./assets/spider-plant.png" alt="plant" class="plant game-pieces"/>`
     addPlays(id.id)
     playerOne.turn = false
     playerTwo.turn = true
-  } else if(playerTwo.turn === true && !id.alt) {
+  } else if(playerTwo.turn === true && !id.alt && id.innerHTML === '') {
     id.innerHTML = `<img src="./assets/moth.png" alt="moth" class="moth game-pieces"/>`
     addPlays(id.id)
     playerOne.turn = true
