@@ -6,9 +6,9 @@ Tic-Tac-Toe
   * PM [Scott Ertmer](https://github.com/sertmer)
 
 #### Links
-  [Repository Link](https://github.com/KATIETOLER/tic-tac-toe)
+*  [Repository Link](https://github.com/KATIETOLER/tic-tac-toe)
 
-#### Technologies
+#### Technologies Used
 * HTML
 * CSS
 * Javascript
@@ -36,26 +36,30 @@ Site Examples
 ===
 
 **Start Over**
+
 ![start over button](https://media0.giphy.com/media/ONpy6gl1UKlIXzeYkw/giphy.gif)
 
 **It's a Tie!**
+
 ![Game Can Tie](https://media0.giphy.com/media/FvAOf3OVoYwwCbwx6U/giphy.gif)
 
 **Moth Wins!**
+
 ![Moth can Win](https://media0.giphy.com/media/mPq6BgNDSq6cvCEpoS/giphy.gif)
 
 **Plant Wins!**
+
 ![Plant can Win](https://media0.giphy.com/media/kIF3fH9E21XNpxeF2Q/giphy.gif)
 
 ---
 
 ##### _Color Palette_
-  * Misty Rose #F9E0D9
-  * Almond #E6DBD0
-  * Deep Taupe #7D6167
-  * Wintergreen Dream #6A8E7F
-  * Silver Pink #B29E9C
-  * Eggplant Dark #5D4954
+  * `Misty Rose #F9E0D9`
+  * `Almond #E6DBD0`
+  * `Deep Taupe #7D6167`
+  * `Wintergreen Dream #6A8E7F`
+  * `Silver Pink #B29E9C`
+  * `Eggplant Dark #5D4954`
 
 ---
 

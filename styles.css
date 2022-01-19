@@ -40,9 +40,9 @@ article {
   height: 10vw;
   background-color: inherit;
   align-items: center;
-  -webkit-animation: bounce-in-right 2.1s both;
-  animation: bounce-in-right 2.1s both;
-  animation: fade-out-right 5s;
+  -webkit-animation: bounce-in-right 1.1s both;
+  animation: bounce-in-right 1.1s both;
+  animation: fade-out-right 1s;
   animation-fill-mode: forwards;
 }
 
@@ -86,7 +86,7 @@ img, .win-counter, .player-one, .player-two {
   height: 10vw;
   width: 10vw;
   background-color: #F9E0D9;
-  border: .3vw solid #B29E9C;
+  border: .2vw solid #B29E9C;
   align-items: center;
   justify-content: center;
 }

@@ -1,7 +1,7 @@
 class Game {
   constructor(winner){
-    this.playerOne = new Player("plant", true);
-    this.playerTwo = new Player("moth", false);
+    this.playerOne = new Player("plant");
+    this.playerTwo = new Player("moth");
     this.winner = winner;
     this.turnCount = 0;
   }
